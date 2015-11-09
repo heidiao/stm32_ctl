@@ -4,8 +4,8 @@ CFLAGS = -O2 -Wall -fPIC
 LFLAGS = $(CFLAGS)
 LIB = stm32_ctrl
 TARGET = stm32_ctrl
-OBJS = main.o
-LIB_OBJS = byte_stuffing.o serial_protocol.o util.o stepper_motor.o
+OBJS = main_fsm.o
+LIB_OBJS = byte_stuffing.o serial_protocol.o util.o stepper_motor.o queue.o
 
 all: $(TARGET)
 

@@ -4,7 +4,7 @@
 #include	<stdio.h>
 #include	"def.h"
 
-void dump( FILE *fp, uint8_t *buf, int length );
-uint8_t cal_checksum8( uint8_t *ptr, int length );
+void dump( FILE *fp, const uint8_t *buf, int length );
+uint8_t cal_checksum8( const void *buf, int length );
 
 #endif

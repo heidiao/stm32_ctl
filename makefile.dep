@@ -1,6 +1,9 @@
 byte_stuffing.o: byte_stuffing.c byte_stuffing.h def.h
-main.o: main.c serial_protocol.h def.h util.h stepper_motor.h
-serial_protocol.o: serial_protocol.c serial_protocol.h def.h \
+main.o: main.c def.h serial_protocol.h queue.h stepper_motor.h util.h
+main_fsm.o: main_fsm.c def.h serial_protocol.h queue.h stepper_motor.h \
+ util.h
+queue.o: queue.c queue.h def.h
+serial_protocol.o: serial_protocol.c serial_protocol.h def.h queue.h \
  byte_stuffing.h util.h
 stepper_motor.o: stepper_motor.c stepper_motor.h def.h
 util.o: util.c util.h def.h
